@@ -102,6 +102,11 @@ impl<'a> Git<'a> {
         }
         return false;
     }
+
+    /// The getter for the name of the repository
+    pub fn name(&self) -> &str{
+        &self.name
+    }
 }
 
 #[derive(Clone)]
@@ -123,6 +128,11 @@ impl<'a> Commit<'a> {
     /// The getter for the message property of a commit
     pub fn message(&self) -> &'a str {
         self.message
+    }
+
+    /// The getter for the id
+    pub fn id(&self) -> i32 {
+        self.id
     }
 }
 
